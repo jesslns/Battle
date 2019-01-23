@@ -2,5 +2,6 @@
 
 <h2><%= @player2 %>: 1 point(s)</h2>
 
-<button>Attack</button>
-<%= @player1 %> attacked <%=@player2 %>!
+<form action="/attack">
+  <input type='submit' value='Attack'>
+  </form>
