@@ -1,4 +1,19 @@
-<%= @player1.name %> attacked <%=@player2.name %>!
+<style>
+
+body {
+  text-align: center;
+  background-color: pink;
+  font-family: "Arial"
+  }
+
+h1 {
+  margin-top: 50px;
+  color: red;
+}
+
+</style>
+
+<h1> <%= @player1.name %> attacked <%=@player2.name %>! </h1>
 
 <form action='/play'>
   <input type='submit' name='OK'>
