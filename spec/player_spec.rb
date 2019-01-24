@@ -16,7 +16,7 @@ describe Player do
   end
 
   it "lost HPs" do
-    expect {player2.is_attacked}.to change{player2.score}.by (-10)
+    expect {player2.is_hit}.to change{player2.score}.by (-10)
   end
 
 end

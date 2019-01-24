@@ -11,10 +11,14 @@ h1 {
   color: red;
 }
 
+button {
+  font-size: 25px;
+}
+
 </style>
 
 <h1> <%= @player1.name %> attacked <%=@player2.name %>! </h1>
 
 <form action='/play'>
-  <input type='submit' name='OK'>
+  <button type='submit'>OK</button>
   </form>
