@@ -1,3 +1,5 @@
+require_relative './game'
+
 class Player
 attr_reader :name, :score
 DEFAULT_SCORE = 60
@@ -7,11 +9,7 @@ def initialize(name, score=DEFAULT_SCORE)
   @score = score
 end
 
-def attack(player)
-  player.is_hit
-end
-
-def is_hit
+def get_hit
   @score -= 10
 end
 

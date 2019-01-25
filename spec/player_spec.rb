@@ -1,22 +1,18 @@
 require 'player'
 
 describe Player do
-  subject(:player1) {Player.new('Raymond')}
-  subject(:player2) {Player.new('Jessie')}
+ subject(:player1) { Player.new('Raymond') }
+ subject(:player2) { Player.new('Jessie') }
 
-  describe "#name" do
-    it "shows player name" do
-      expect(player1.name).to eq 'Raymond'
-    end
-  end
+ describe '#name' do
+   it 'returns the name' do
+     expect(player1.name).to eq 'Raymond'
+   end
+ end
 
-  it "attacks player 2" do
-    expect(player2).to receive(:is_hit)
-    player1.attack(player2)
-  end
-
-  it "lost HPs" do
-    expect {player2.is_hit}.to change{player2.score}.by (-10)
-  end
-
+ describe '#get_hit' do
+   it 'returns the hit points' do
+     expect(player1.score).to eq described_class::DEFAULT_SCORE
+   end
+ end
 end
