@@ -25,7 +25,8 @@ end
 
 get '/attack' do
   @game = $game
-  @game.attack(@game.player2)
+  @game.attack(@game.not_turn) #need to do oposite
+  @game.switch_turn
   erb(:attack)
 end
 end

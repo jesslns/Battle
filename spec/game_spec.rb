@@ -18,9 +18,15 @@ describe Game do
   end
 
   describe "#attack" do
-  it "attacks player2" do
-    expect(player2).to receive(:get_hit)
-    game.attack(player2)
+    it "attacks player2" do
+      expect(player2).to receive(:get_hit)
+      game.attack(player2)
+    end
   end
-end
+
+  describe "#turn" do
+    it "player1's turn at start" do
+      expect(game.turn).to eq(player1)
+    end
+  end
 end

@@ -1,7 +1,7 @@
 feature 'Enter name' do
   scenario 'Players fill in their names in a form' do
     sign_in_and_play
-    expect(page).to have_content 'Raymond vs Jessie'
+    expect(page).to have_content 'Raymond: 60 HP(s)'
   end
 end
 
